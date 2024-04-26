@@ -1,0 +1,168 @@
+section {
+  width: 100%;
+  padding: 45px 120px;
+}
+
+.image-back {
+  width: 100%;
+  height: 650px;
+  background-image: url(/assets/images/image-bacj«k.png);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.image-back::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.566);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title1 {
+  font-size: 20px;
+  color: white;
+}
+
+.subtitle1 {
+  font-size: 14px;
+  color: #cbcbcb;
+  background: none;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  color: white;
+}
+
+ul li {
+  font-size: 15px;
+  list-style-type: none;
+  cursor: pointer;
+  transition: .2s;
+}
+
+ul li:hover {
+  /* color: #39468a; */
+  color: #ffa023;
+}
+
+main {
+  margin-top: 70px;
+}
+
+h1 {
+  width: 400px;
+  color: white;
+  font-size: 40px;
+}
+
+.ctx {
+  width: 600px;
+  color: #cbcbcb;
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 27px;
+}
+
+.btn-work {
+  width: 160px;
+  height: 50px;
+  background: #ffa023;
+  color: rgb(31, 31, 31);
+  font-size: 15px;
+  outline: none;
+  border: none;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: .3s;
+  animation: move 4s infinite linear;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.btn-work:hover {
+  box-shadow: 0 0 14px #ffa023;
+}
+
+.block-about-me {
+  width: 100%;
+  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: white;
+}
+
+.ctx-about {
+  width: 75%;
+  margin-top: 16px;
+  color: #dddddd;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.block-what-do {
+  width: 100%;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.block-what-do .container2 {
+  width: 100%;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  width: 400px;
+  padding: 20px;
+  transition: .3s;
+  background: rgba(255, 160, 35, 0.1);
+}
+
+.card:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+  color: white;
+}
+
+.card p {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #dddddd;
+}
