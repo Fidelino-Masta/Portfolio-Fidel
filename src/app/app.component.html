@@ -9,15 +9,15 @@
 
 
     <ul>
-      <li>Home</li>
-      <li>About me</li>
-      <li>Services</li>
-      <li>Projects</li>
-      <li>Contacts</li>
+      <li (click)="scrollTo('home')">Home</li>
+      <li (click)="scrollTo('about')">About me</li>
+      <li (click)="scrollTo('service')">Services</li>
+      <li (click)="scrollTo('project')">Projects</li>
+      <li (click)="scrollTo('contact')">Contacts</li>
     </ul>
   </header>
 
-  <main>
+  <main id="home">
     <h1>I'M PROGRAMMER FRONT-END</h1>
 
     <p class="ctx">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -26,10 +26,10 @@
       eveniet ex possimus quidem qui ipsa impedit!
     </p>
 
-    <button class="btn-work">Solicitar serviço</button>
+    <button (click)="scrollTo('contact')" class="btn-work">Solicitar serviço</button>
 
-    <div class="block-about-me">
-      <h2>ABOUT ME</h2>
+    <div id="about" class="block-about-me">
+      <h2>About me</h2>
 
       <div class="ctx-about">
           Ut vitae tellus aliquet, convallis urna id, mattis odio. Proin viverra nibh sem,
@@ -46,8 +46,8 @@
       </div>
     </div>
 
-    <div class="block-what-do">
-      <h2>WHAT I DO</h2>
+    <div id="service" class="block-what-do">
+      <h2>What I do</h2>
 
       <div class="container2">
         <div class="card">
@@ -78,7 +78,20 @@
     </div>
 
     <div class="block-techn">
-      <img class="logo" src="/assets/icons/logo-angular.png" alt="">
+      <div class="techn techn1">
+        <img class="logo" src="/assets/icons/logo-angular.png" alt="">
+
+        <div class="ctx-techn">
+          <p class="ctx-techn-title">Angular</p>
+          <p class="ctx-techn-content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur soluta
+            repudiandae adipisci animi mollitia eius autem optio. Nihil, et dolorem.
+          </p>
+          <div class="level"></div> <span>50%</span>
+        </div>
+
+      </div>
+
       <img class="logo" src="/assets/icons/logo-css.png" alt="">
       <img class="logo" src="/assets/icons/logo-html.png" alt="">
       <img class="logo" src="/assets/icons/logo-javascript.png" alt="">
@@ -87,13 +100,13 @@
       <img src="/assets/icons/logo-sass.png" alt="" class="logo">
     </div>
 
-    <div class="block-projects">
-      <h2>MY WORKS</h2>
+    <div id="project" class="block-projects">
+      <h2>My works</h2>
 
       <div class="container3">
         <div class="project1">
           <div class="image-project image-project1"></div>
-          <p class="name-project">API Portal</p>
+          <p class="name-project">Portfolio</p>
           <p class="ctx3">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Nobis animi, vitae obcaecati doloremque.
@@ -113,7 +126,37 @@
 
         <div class="project1">
           <div class="image-project image-project3"></div>
-          <p class="name-project">API Portal</p>
+          <p class="name-project">Rap Battle App</p>
+          <p class="ctx3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Nobis animi, vitae obcaecati doloremque.
+          </p>
+          <button>Saber mais</button>
+        </div>
+
+        <div class="project1">
+          <div class="image-project image-project4"></div>
+          <p class="name-project">Rede social UI/UX design</p>
+          <p class="ctx3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Nobis animi, vitae obcaecati doloremque.
+          </p>
+          <button>Saber mais</button>
+        </div>
+
+        <div class="project1">
+          <div class="image-project image-project5"></div>
+          <p class="name-project">UI/UX Foruns</p>
+          <p class="ctx3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Nobis animi, vitae obcaecati doloremque.
+          </p>
+          <button>Saber mais</button>
+        </div>
+
+        <div class="project1">
+          <div class="image-project image-project6"></div>
+          <p class="name-project">Api Portal</p>
           <p class="ctx3">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Nobis animi, vitae obcaecati doloremque.
@@ -124,5 +167,61 @@
     </div>
   </main>
 
-  <footer></footer>
+  <footer id="contact">
+    <div class="block-left">
+      <h2>Portfolio</h2>
+      <p class="mes">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolore quis
+        distinctio consequatur a. Et reprehenderit a accusantium, autem consectetur
+        repellat quo mollitia, atque laborum reiciendis doloribus ducimus asperiores vero.
+      </p>
+
+      <div class="list-send-message">
+        <div class="item-send-message">
+          <img src="/assets/icons/envelope-simple.svg" alt="">
+          <div class="texts">
+            <p>Envie uma mensagem aqui.</p>
+            <a [routerLink]="''">fidelinomasta@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="item-send-message">
+          <img src="/assets/icons/phone.svg" alt="">
+          <div class="texts">
+            <p>Ligue para conversar.</p>
+            <a [routerLink]="''">+244942833730</a>
+          </div>
+        </div>
+      </div>
+
+      <ul class="list2">
+        <li>Home</li>
+        <li>About me</li>
+        <li>Services</li>
+        <li>Projects</li>
+        <li>Contacts</li>
+      </ul>
+    </div>
+
+    <div class="block-right">
+      <h2>Solicitar serviço</h2>
+      <p class="mes">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, rerum!
+        Iste commodi quod incidunt.
+      </p>
+
+      <div class="input-contact">
+        <input type="email" placeholder="Digite o seu email">
+        <button>Enviar</button>
+      </div>
+
+      <div class="media-social">
+        <a href=""><img src="/assets/icons/facebook-logo.svg" alt=""></a>
+        <a href=""><img src="/assets/icons/linkedin-logo.svg" alt=""></a>
+        <a href=""><img src="/assets/icons/github-logo.svg" alt=""></a>
+      </div>
+
+      <p class="text-footer">© 2021-2023, Todos os direitos reservados</p>
+    </div>
+  </footer>
 </section>
