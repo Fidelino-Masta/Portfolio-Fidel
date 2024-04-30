@@ -9,11 +9,11 @@
 
 
     <ul>
-      <li (click)="scrollTo('home')">Home</li>
-      <li (click)="scrollTo('about')">About me</li>
-      <li (click)="scrollTo('service')">Services</li>
-      <li (click)="scrollTo('project')">Projects</li>
-      <li (click)="scrollTo('contact')">Contacts</li>
+      <li translate="no" (click)="scrollTo('home')">Home</li>
+      <li translate="no" (click)="scrollTo('about')">About me</li>
+      <li translate="no" (click)="scrollTo('service')">Services</li>
+      <li translate="no" (click)="scrollTo('project')">Projects</li>
+      <li translate="no" (click)="scrollTo('contact')">Contacts</li>
     </ul>
   </header>
 
@@ -79,25 +79,92 @@
 
     <div class="block-techn">
       <div class="techn techn1">
-        <img class="logo" src="/assets/icons/logo-angular.png" alt="">
+        <img (mouseenter)="mouseEnterAngular()" (mouseout)="mouseOutAngular()" class="logo" src="/assets/icons/angular.png" alt="">
 
-        <div class="ctx-techn">
+        <div *ngIf="cardAngular" class="ctx-techn">
           <p class="ctx-techn-title">Angular</p>
           <p class="ctx-techn-content">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur soluta
             repudiandae adipisci animi mollitia eius autem optio. Nihil, et dolorem.
           </p>
-          <div class="level"></div> <span>50%</span>
+          <div class="level level1"></div> <span>40%</span>
         </div>
-
       </div>
 
-      <img class="logo" src="/assets/icons/logo-css.png" alt="">
-      <img class="logo" src="/assets/icons/logo-html.png" alt="">
-      <img class="logo" src="/assets/icons/logo-javascript.png" alt="">
-      <img class="logo" src="/assets/icons/logo-java.png" alt="">
-      <img class="logo" src="/assets/icons/logo-typescript.svg" alt="">
-      <img src="/assets/icons/logo-sass.png" alt="" class="logo">
+      <div class="techn techn2">
+        <img (mouseenter)="mouseEnterCss()" (mouseout)="mouseOutCss()" class="logo" src="/assets/icons/css.png" alt="">
+
+        <div *ngIf="cardCss" class="ctx-techn">
+          <p class="ctx-techn-title">CSS3</p>
+          <p class="ctx-techn-content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit
+            repudiandae adipisci animi mollitia eius autem optio.
+          </p>
+          <div class="level level2"></div> <span>90%</span>
+        </div>
+      </div>
+
+      <div class="techn techn3">
+        <img (mouseenter)="mouseEnterHtml()" (mouseout)="mouseOutHtml()" class="logo" src="/assets/icons/html.png" alt="">
+
+        <div *ngIf="cardHtml" class="ctx-techn">
+          <p class="ctx-techn-title">HTML5</p>
+          <p class="ctx-techn-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ratione voluptatibus odit laudantium.
+          </p>
+          <div class="level level3"></div> <span>85%</span>
+        </div>
+      </div>
+
+      <div class="techn techn4">
+        <img (mouseenter)="mouseEnterJs()" (mouseout)="mouseOutJs()" class="logo" src="/assets/icons/js.png" alt="">
+
+        <div *ngIf="cardJs" class="ctx-techn">
+          <p class="ctx-techn-title">Javascript</p>
+          <p class="ctx-techn-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur accusantium tempora esse ratione.
+          </p>
+          <div class="level level4"></div> <span>55%</span>
+        </div>
+      </div>
+
+      <div class="techn techn5">
+        <img (mouseenter)="mouseEnterJava()" (mouseout)="mouseOutJava()" class="logo" src="/assets/icons/java.png" alt="">
+
+        <div *ngIf="cardJava" class="ctx-techn">
+          <p class="ctx-techn-title">Java</p>
+          <p class="ctx-techn-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, corporis adipisci.
+          </p>
+          <div class="level level5"></div> <span>40%</span>
+        </div>
+      </div>
+
+      <div class="techn techn6">
+        <img (mouseenter)="mouseEnterTypescript()" (mouseout)="mouseOutTypescript()" class="logo" src="/assets/icons/logo-typescript.svg" alt="">
+
+        <div *ngIf="cardTypescript" class="ctx-techn">
+          <p class="ctx-techn-title">Typescript</p>
+          <p class="ctx-techn-content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, optio possimus excepturi reprehenderit.
+          </p>
+          <div class="level level6"></div> <span>47%</span>
+        </div>
+      </div>
+
+      <div class="techn techn7">
+        <img (mouseenter)="mouseEnterSass()" (mouseout)="mouseOutSass()" src="/assets/icons/logo-sass.png" alt="" class="logo">
+
+        <div *ngIf="cardSass" class="ctx-techn">
+          <p class="ctx-techn-title">SASS</p>
+          <p class="ctx-techn-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi eligendi doloribus
+            rerum, amet est praesentium. Molestiae et nesciunt esse rerum veniam.
+          </p>
+          <div class="level level7"></div> <span>75%</span>
+        </div>
+      </div>
+
     </div>
 
     <div id="project" class="block-projects">
@@ -181,7 +248,7 @@
           <img src="/assets/icons/envelope-simple.svg" alt="">
           <div class="texts">
             <p>Envie uma mensagem aqui.</p>
-            <a [routerLink]="''">fidelinomasta@gmail.com</a>
+            <a href="mailto:fidelinomasta@gmail.com">fidelinomasta@gmail.com</a>
           </div>
         </div>
 
@@ -189,17 +256,17 @@
           <img src="/assets/icons/phone.svg" alt="">
           <div class="texts">
             <p>Ligue para conversar.</p>
-            <a [routerLink]="''">+244942833730</a>
+            <a href="tel:+244942833730">+244942833730</a>
           </div>
         </div>
       </div>
 
       <ul class="list2">
-        <li>Home</li>
-        <li>About me</li>
-        <li>Services</li>
-        <li>Projects</li>
-        <li>Contacts</li>
+        <li translate="no" (click)="scrollTo('home')">Home</li>
+        <li translate="no" (click)="scrollTo('about')">About me</li>
+        <li translate="no" (click)="scrollTo('service')">Services</li>
+        <li translate="no" (click)="scrollTo('project')">Projects</li>
+        <li translate="no" (click)="scrollTo('contact')">Contacts</li>
       </ul>
     </div>
 
