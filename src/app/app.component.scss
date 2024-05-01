@@ -144,7 +144,7 @@ h1 {
 
 .block-about-me {
   width: 100%;
-  margin-top: 250px;
+  margin-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -327,21 +327,26 @@ h2 {
 }
 
 .links-components-works {
-  width: 100%;
   display: flex;
   gap: 24px;
   align-items: center;
-  margin: 24px 0;
+  margin: 48px 0;
 }
 
 .texts-link {
   font-size: 14px;
   text-decoration: none;
   color: white;
+  padding: 15px;
+  background: rgb(128, 128, 128, 0.15);
+  border-radius: 3px;
 }
 
 .active-link {
-  color: #ff7f23;
+  color: #ffa023;
+  background: none;
+  border-bottom: 3px solid #ffa023;
+  border-radius: 0;
 }
 
 footer {
