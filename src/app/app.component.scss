@@ -58,8 +58,41 @@ ul li:hover {
   color: #ffa023;
 }
 
+.element-father {
+  width: 100%;
+  height: 30px;
+  margin-top: 48px;
+}
+
+.text-animated {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #cbcbcb;
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+@keyframes escrever {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes apagar {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
 main {
-  margin-top: 70px;
+  margin-top: 40px;
   margin-bottom: 80px;
 }
 
@@ -117,11 +150,6 @@ h1 {
   align-items: center;
 }
 
-/* .block-about-me {
-  animation: fade-in linear;
-  animation-timeline: view();
-} */
-
 h2 {
   color: white;
 }
@@ -147,24 +175,15 @@ h2 {
 .block-what-do .container2 {
   width: 100%;
   display: flex;
-  gap: 32px;
+  gap: 48px;
   justify-content: center;
   margin-top: 20px;
-}
-
-/* .block-what-do {
-  animation: fade-in linear;
-  animation-timeline: view();
-} */
-
-@keyframes fade-in {
-  from {scale: .8; opacity: 0;}
-  to { scale: 1; opacity: 1;}
+  flex-wrap: wrap;
 }
 
 .card {
-  width: 400px;
-  padding: 20px 20px 10px;
+  width: 370px;
+  padding: 15px;
   transition: .3s;
   background: rgba(255, 160, 35, 0.1);
   display: flex;
@@ -204,7 +223,7 @@ h2 {
 }
 
 .logo {
-  width: 100px;
+  width: 80px;
 }
 
 .ctx-techn {
@@ -282,6 +301,16 @@ h2 {
   background: #ff71bd;
 }
 
+.level8::before {
+  width: 60%;
+  background: linear-gradient(90deg, #F8981D, #f13636, #d744ff, #5686ff, #5bd85d);
+}
+
+.level9::before {
+  width: 49%;
+  background: #316BFF;
+}
+
 .ctx-techn span {
   color: #cbcbcb;
   font-size: 14px;
@@ -294,101 +323,25 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
 }
 
-.container3 {
+.links-components-works {
   width: 100%;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  row-gap: 32px;
-  column-gap: 80px;
+  gap: 24px;
+  align-items: center;
+  margin: 24px 0;
 }
 
-.project1 {
-  width: 330px;
-}
-
-.image-project {
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.image-project1 {
-  background-image: url(/assets/images/image-project.png);
-}
-
-.image-project2 {
-  background-image: url(/assets/images/hosptal.png);
-}
-
-.image-project3 {
-  background-image: url(/assets/images/rrpl.png);
-}
-
-.image-project4 {
-  background-image: url(/assets/images/media-social.png);
-}
-
-.image-project5 {
-  background-image: url(/assets/images/newsletter.png);
-}
-
-.image-project6 {
-  background-image: url(/assets/images/api-portal.png);
-}
-
-.name-project {
+.texts-link {
+  font-size: 14px;
+  text-decoration: none;
   color: white;
-  margin-top: 8px;
 }
 
-.ctx3 {
-  color: #cbcbcb;
-  margin-top: 4px;
-  font-size: 14px;
+.active-link {
+  color: #ff7f23;
 }
-
-.container3 button {
-  width: 110px;
-  height: 45px;
-  background: none;
-  color: #ffa023;
-  font-size: 14px;
-  outline: none;
-  border: 1px solid #ffa023;
-  margin-top: 8px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: 1s;
-}
-
-.container3 button::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 0%;
-  top: 0;
-  left: 0;
-  transition: 1s;
-  z-index: -1;
-  border-radius: 0 0 10px 10px;
-}
-
-.container3 button:hover::before {
-  height: 180%;
-  background: #ffa023;
-}
-
-.container3 button:hover {
-  color: #212121;
-}
-
 
 footer {
   width: 100%;

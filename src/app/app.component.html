@@ -28,6 +28,10 @@
 
     <button (click)="scrollTo('contact')" class="btn-work">Solicitar serviço</button>
 
+    <div class="element-father">
+      <div class="text-animated">{{ textAnimated }}</div>
+    </div>
+
     <div id="about" class="block-about-me">
       <h2>About me</h2>
 
@@ -51,13 +55,23 @@
 
       <div class="container2">
         <div class="card">
-          <h3>FRONT-END DEVELOPER</h3>
+          <h3>WEB DEVELOPER</h3>
 
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae
             sed laudantium iure voluptate commodi rem, quo vero deleniti iste
-            repellendus quam consectetur maiores! Maxime, inventore illo tempora
-            aliquid deleniti placeat!
+            repellendus quam consectetur maiores!
+          </p>
+
+          <a class="see-more" [routerLink]="''">Ver mais</a>
+        </div>
+
+        <div class="card">
+          <h3>DEVELOPER MOBILE</h3>
+
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dicta nisi
+            asperiores ratione dolore eum qui nobis vitae exercitationem.
           </p>
 
           <a class="see-more" [routerLink]="''">Ver mais</a>
@@ -66,10 +80,10 @@
         <div class="card">
           <h3>UI/UX DESIGN</h3>
 
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Cum nihil, nesciunt rem reiciendis quidem dolorem? Sit qui
-            aperiam repudiandae maxime ipsa fugit quidem error sapiente illo
-            maiores quas, libero natus.
+            aperiam repudiandae.
           </p>
 
           <a class="see-more" [routerLink]="''">Ver mais</a>
@@ -104,6 +118,19 @@
         </div>
       </div>
 
+      <div class="techn techn8">
+        <img (mouseenter)="mouseEnterFigma()" (mouseout)="mouseOutFigma()" class="logo" src="/assets/icons/figma.png" alt="">
+
+        <div *ngIf="cardFigma" class="ctx-techn">
+          <p class="ctx-techn-title">Figma</p>
+          <p class="ctx-techn-content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit
+            repudiandae adipisci animi mollitia.
+          </p>
+          <div class="level level8"></div> <span>60%</span>
+        </div>
+      </div>
+
       <div class="techn techn3">
         <img (mouseenter)="mouseEnterHtml()" (mouseout)="mouseOutHtml()" class="logo" src="/assets/icons/html.png" alt="">
 
@@ -113,6 +140,19 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ratione voluptatibus odit laudantium.
           </p>
           <div class="level level3"></div> <span>85%</span>
+        </div>
+      </div>
+
+      <div class="techn techn9">
+        <img (mouseenter)="mouseEnterIonic()" (mouseout)="mouseOutIonic()" class="logo" src="/assets/icons/ionic.svg" alt="">
+
+        <div *ngIf="cardIonic" class="ctx-techn">
+          <p class="ctx-techn-title">Ionic</p>
+          <p class="ctx-techn-content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit
+            repudiandae adipisci animi mollitia eius autem optio.
+          </p>
+          <div class="level level9"></div> <span>49%</span>
         </div>
       </div>
 
@@ -170,67 +210,13 @@
     <div id="project" class="block-projects">
       <h2>My works</h2>
 
-      <div class="container3">
-        <div class="project1">
-          <div class="image-project image-project1"></div>
-          <p class="name-project">Portfolio</p>
-          <p class="ctx3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Nobis animi, vitae obcaecati doloremque.
-          </p>
-          <button>Saber mais</button>
-        </div>
-
-        <div class="project1">
-          <div class="image-project image-project2"></div>
-          <p class="name-project">Software of a Hospital</p>
-          <p class="ctx3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Nobis animi, vitae obcaecati doloremque.
-          </p>
-          <button>Saber mais</button>
-        </div>
-
-        <div class="project1">
-          <div class="image-project image-project3"></div>
-          <p class="name-project">Rap Battle App</p>
-          <p class="ctx3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Nobis animi, vitae obcaecati doloremque.
-          </p>
-          <button>Saber mais</button>
-        </div>
-
-        <div class="project1">
-          <div class="image-project image-project4"></div>
-          <p class="name-project">Rede social UI/UX design</p>
-          <p class="ctx3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Nobis animi, vitae obcaecati doloremque.
-          </p>
-          <button>Saber mais</button>
-        </div>
-
-        <div class="project1">
-          <div class="image-project image-project5"></div>
-          <p class="name-project">UI/UX Foruns</p>
-          <p class="ctx3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Nobis animi, vitae obcaecati doloremque.
-          </p>
-          <button>Saber mais</button>
-        </div>
-
-        <div class="project1">
-          <div class="image-project image-project6"></div>
-          <p class="name-project">Api Portal</p>
-          <p class="ctx3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Nobis animi, vitae obcaecati doloremque.
-          </p>
-          <button>Saber mais</button>
-        </div>
+      <div class="links-components-works">
+        <p class="text-web"><a class="texts-link" [routerLinkActive]="'active-link'" [routerLink]="'project-app-web'">Projectos Web</a></p>
+        <p class="text-mobile"><a class="texts-link" [routerLinkActive]="'active-link'" [routerLink]="'project-app-mobile'">Projectos Mobile</a></p>
+        <p class="text-design"><a class="texts-link" [routerLinkActive]="'active-link'" [routerLink]="'design-web'">UI/UX Design</a></p>
       </div>
+
+      <router-outlet></router-outlet>
     </div>
   </main>
 

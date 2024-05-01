@@ -1,0 +1,91 @@
+.container3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 32px;
+  column-gap: 80px;
+}
+
+.project1 {
+  width: 330px;
+}
+
+.image-project {
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image-project1 {
+  background-image: url(/assets/images/image-project.png);
+}
+
+.image-project2 {
+  background-image: url(/assets/images/hosptal.png);
+}
+
+.image-project3 {
+  background-image: url(/assets/images/rrpl.png);
+}
+
+.image-project4 {
+  background-image: url(/assets/images/mikanda.png);
+}
+
+.image-project5 {
+  background-image: url(/assets/images/low-code.png);
+}
+
+.image-project6 {
+  background-image: url(/assets/images/api-portal.png);
+}
+
+.name-project {
+  color: white;
+  margin-top: 8px;
+}
+
+.ctx3 {
+  color: #cbcbcb;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.container3 button {
+  width: 110px;
+  height: 45px;
+  background: none;
+  color: #ffa023;
+  font-size: 14px;
+  outline: none;
+  border: 1px solid #ffa023;
+  margin-top: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.container3 button::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  transition: 1s;
+  z-index: -1;
+  border-radius: 0 0 10px 10px;
+}
+
+.container3 button:hover::before {
+  height: 180%;
+  background: #ffa023;
+}
+
+.container3 button:hover {
+  color: #212121;
+}
